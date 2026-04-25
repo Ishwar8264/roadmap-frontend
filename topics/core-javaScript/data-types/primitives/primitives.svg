@@ -1,0 +1,70 @@
+<svg width="760" height="480" viewBox="0 0 760 480" xmlns="http://www.w3.org/2000/svg">
+  <rect width="760" height="480" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="380" y="40" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">
+    JavaScript Primitive Types
+  </text>
+
+  <!-- Main box -->
+  <rect x="280" y="70" width="200" height="50" rx="12" fill="#0f172a"/>
+  <text x="380" y="102" text-anchor="middle" font-size="18" fill="#ffffff">
+    Primitive
+  </text>
+
+  <!-- Line -->
+  <line x1="380" y1="120" x2="380" y2="150" stroke="#64748b" stroke-width="2"/>
+
+  <!-- Horizontal line -->
+  <line x1="80" y1="150" x2="680" y2="150" stroke="#64748b" stroke-width="2"/>
+
+  <!-- Vertical lines -->
+  <g stroke="#64748b" stroke-width="2">
+    <line x1="110" y1="150" x2="110" y2="180"/>
+    <line x1="190" y1="150" x2="190" y2="180"/>
+    <line x1="270" y1="150" x2="270" y2="180"/>
+    <line x1="350" y1="150" x2="350" y2="180"/>
+    <line x1="430" y1="150" x2="430" y2="180"/>
+    <line x1="510" y1="150" x2="510" y2="180"/>
+    <line x1="590" y1="150" x2="590" y2="180"/>
+  </g>
+
+  <!-- Boxes -->
+  <g font-size="14" font-weight="600" fill="#0f172a">
+    <rect x="70" y="180" width="80" height="50" rx="10" fill="#e0f2fe"/>
+    <text x="110" y="210" text-anchor="middle">String</text>
+
+    <rect x="150" y="180" width="80" height="50" rx="10" fill="#dcfce7"/>
+    <text x="190" y="210" text-anchor="middle">Number</text>
+
+    <rect x="230" y="180" width="80" height="50" rx="10" fill="#fef3c7"/>
+    <text x="270" y="210" text-anchor="middle">Boolean</text>
+
+    <rect x="310" y="180" width="80" height="50" rx="10" fill="#fee2e2"/>
+    <text x="350" y="210" text-anchor="middle">Undefined</text>
+
+    <rect x="390" y="180" width="80" height="50" rx="10" fill="#ede9fe"/>
+    <text x="430" y="210" text-anchor="middle">Null</text>
+
+    <rect x="470" y="180" width="80" height="50" rx="10" fill="#fae8ff"/>
+    <text x="510" y="210" text-anchor="middle">Symbol</text>
+
+    <rect x="550" y="180" width="80" height="50" rx="10" fill="#ccfbf1"/>
+    <text x="590" y="210" text-anchor="middle">BigInt</text>
+  </g>
+
+  <!-- Example Code Box -->
+  <rect x="150" y="260" width="460" height="190" rx="12" fill="#0f172a"/>
+
+  <!-- Code -->
+  <g font-size="14" fill="#22c55e" font-family="monospace">
+    <text x="170" y="290">const name = "Ishwar";       // string</text>
+    <text x="170" y="310">const age = 25;              // number</text>
+    <text x="170" y="330">const isLogin = true;        // boolean</text>
+    <text x="170" y="350">let user;                    // undefined</text>
+    <text x="170" y="370">const data = null;           // null</text>
+    <text x="170" y="390">const id = Symbol("id");     // symbol</text>
+    <text x="170" y="410">const big = 123456789n;      // bigint</text>
+  </g>
+
+</svg>
