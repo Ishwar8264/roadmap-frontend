@@ -1,0 +1,67 @@
+<svg width="920" height="560" viewBox="0 0 920 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="920" height="560" fill="#f8fafc"/>
+
+  <text x="460" y="42" text-anchor="middle" font-size="28" font-weight="700" fill="#0f172a">
+    Spread vs Rest Operator
+  </text>
+  <text x="460" y="72" text-anchor="middle" font-size="15" fill="#475569">
+    Same syntax (...), different meaning based on usage
+  </text>
+
+  <!-- Spread -->
+  <rect x="70" y="115" width="360" height="330" rx="16" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+  <text x="250" y="150" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">
+    Spread
+  </text>
+  <text x="250" y="175" text-anchor="middle" font-size="14" fill="#334155">
+    expands values
+  </text>
+
+  <rect x="105" y="210" width="290" height="135" rx="12" fill="#0f172a"/>
+  <text x="125" y="240" font-size="14" fill="#22c55e" font-family="monospace">
+    const a = [1, 2];
+  </text>
+  <text x="125" y="270" font-size="14" fill="#38bdf8" font-family="monospace">
+    const b = [...a, 3];
+  </text>
+  <text x="125" y="305" font-size="14" fill="#f59e0b" font-family="monospace">
+    b = [1, 2, 3]
+  </text>
+
+  <text x="250" y="385" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">
+    Array/Object Copy and Merge
+  </text>
+
+  <!-- Rest -->
+  <rect x="490" y="115" width="360" height="330" rx="16" fill="#ede9fe" stroke="#8b5cf6" stroke-width="3"/>
+  <text x="670" y="150" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">
+    Rest
+  </text>
+  <text x="670" y="175" text-anchor="middle" font-size="14" fill="#334155">
+    collects values
+  </text>
+
+  <rect x="525" y="210" width="290" height="135" rx="12" fill="#0f172a"/>
+  <text x="545" y="240" font-size="14" fill="#22c55e" font-family="monospace">
+    function sum(...nums) {
+  </text>
+  <text x="565" y="270" font-size="14" fill="#22c55e" font-family="monospace">
+      return nums.length;
+  </text>
+  <text x="545" y="300" font-size="14" fill="#22c55e" font-family="monospace">
+    }
+  </text>
+  <text x="545" y="330" font-size="14" fill="#f59e0b" font-family="monospace">
+    sum(1,2,3) = 3
+  </text>
+
+  <text x="670" y="385" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">
+    Function Params and Destructuring
+  </text>
+
+  <!-- Footer -->
+  <rect x="110" y="475" width="700" height="55" rx="14" fill="#0f172a"/>
+  <text x="460" y="508" text-anchor="middle" font-size="15" fill="#ffffff">
+    Spread expands values. Rest collects values.
+  </text>
+</svg>
