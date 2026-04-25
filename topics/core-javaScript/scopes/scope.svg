@@ -1,0 +1,51 @@
+<svg width="860" height="560" viewBox="0 0 860 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="860" height="560" fill="#f8fafc"/>
+
+  <text x="430" y="42" text-anchor="middle" font-size="28" font-weight="700" fill="#0f172a">
+    JavaScript Scope
+  </text>
+
+  <text x="430" y="72" text-anchor="middle" font-size="15" fill="#475569">
+    Scope decides where variables can be accessed
+  </text>
+
+  <!-- Global scope -->
+  <rect x="80" y="105" width="700" height="390" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+  <text x="430" y="135" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">
+    Global Scope
+  </text>
+  <text x="115" y="165" font-size="14" fill="#334155" font-family="monospace">
+    const appName = "Klakar";
+  </text>
+
+  <!-- Function scope -->
+  <rect x="150" y="200" width="560" height="240" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="430" y="230" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">
+    Function Scope
+  </text>
+  <text x="185" y="260" font-size="14" fill="#334155" font-family="monospace">
+    function loginUser() {
+  </text>
+  <text x="205" y="285" font-size="14" fill="#334155" font-family="monospace">
+    const userName = "Ishwar";
+  </text>
+
+  <!-- Block scope -->
+  <rect x="230" y="315" width="400" height="90" rx="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+  <text x="430" y="345" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">
+    Block Scope
+  </text>
+  <text x="260" y="375" font-size="14" fill="#334155" font-family="monospace">
+    if (true) { const status = "active"; }
+  </text>
+
+  <text x="185" y="425" font-size="14" fill="#334155" font-family="monospace">
+    }
+  </text>
+
+  <!-- Rule box -->
+  <rect x="115" y="510" width="630" height="34" rx="10" fill="#0f172a"/>
+  <text x="430" y="532" text-anchor="middle" font-size="14" fill="#ffffff">
+    Inner scope can access outer scope, but outer scope cannot access inner scope variables.
+  </text>
+</svg>
