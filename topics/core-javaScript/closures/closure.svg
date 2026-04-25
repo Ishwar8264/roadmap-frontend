@@ -1,0 +1,55 @@
+<svg width="960" height="620" viewBox="0 0 960 620" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="620" fill="#f8fafc"/>
+
+  <text x="480" y="42" text-anchor="middle" font-size="28" font-weight="700" fill="#0f172a">
+    JavaScript Closure Real Thinking
+  </text>
+
+  <text x="480" y="72" text-anchor="middle" font-size="15" fill="#475569">
+    Function + Lexical Scope = Closure
+  </text>
+
+  <!-- Code box -->
+  <rect x="60" y="115" width="390" height="300" rx="16" fill="#0f172a"/>
+  <text x="85" y="150" font-size="14" fill="#22c55e" font-family="monospace">function outer() {</text>
+  <text x="105" y="178" font-size="14" fill="#22c55e" font-family="monospace">const name = "Ishwar";</text>
+  <text x="105" y="215" font-size="14" fill="#38bdf8" font-family="monospace">function inner() {</text>
+  <text x="125" y="243" font-size="14" fill="#38bdf8" font-family="monospace">console.log(name);</text>
+  <text x="105" y="271" font-size="14" fill="#38bdf8" font-family="monospace">}</text>
+  <text x="105" y="315" font-size="14" fill="#a78bfa" font-family="monospace">return inner;</text>
+  <text x="85" y="345" font-size="14" fill="#22c55e" font-family="monospace">}</text>
+  <text x="85" y="385" font-size="14" fill="#f59e0b" font-family="monospace">const fn = outer();</text>
+
+  <!-- Runtime box -->
+  <rect x="510" y="115" width="390" height="300" rx="16" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+  <text x="705" y="150" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">
+    What JS Keeps
+  </text>
+
+  <rect x="550" y="185" width="310" height="70" rx="12" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="705" y="213" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">
+    inner function
+  </text>
+  <text x="705" y="237" text-anchor="middle" font-size="14" fill="#334155">
+    returned as fn
+  </text>
+
+  <text x="705" y="285" text-anchor="middle" font-size="26" font-weight="700" fill="#334155">+</text>
+
+  <rect x="550" y="310" width="310" height="70" rx="12" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="705" y="338" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">
+    lexical scope
+  </text>
+  <text x="705" y="362" text-anchor="middle" font-size="14" fill="#334155">
+    name = "Ishwar"
+  </text>
+
+  <!-- Result -->
+  <rect x="220" y="465" width="520" height="92" rx="16" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="480" y="500" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">
+    Closure
+  </text>
+  <text x="480" y="528" text-anchor="middle" font-size="15" fill="#334155">
+    JS keeps outer variables alive if the returned inner function needs them.
+  </text>
+</svg>
