@@ -1,0 +1,81 @@
+<svg width="860" height="520" viewBox="0 0 860 520" xmlns="http://www.w3.org/2000/svg">
+  <rect width="860" height="520" fill="#f8fafc"/>
+
+  <text x="430" y="42" text-anchor="middle" font-size="28" font-weight="700" fill="#0f172a">
+    JavaScript Data Types
+  </text>
+
+  <text x="430" y="72" text-anchor="middle" font-size="15" fill="#475569">
+    JavaScript values are mainly divided into Primitive and Object types
+  </text>
+
+  <!-- Main split -->
+  <rect x="80" y="115" width="300" height="70" rx="14" fill="#0f172a"/>
+  <text x="230" y="145" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">
+    Primitive Types
+  </text>
+  <text x="230" y="168" text-anchor="middle" font-size="13" fill="#cbd5e1">
+    stored by value
+  </text>
+
+  <rect x="480" y="115" width="300" height="70" rx="14" fill="#0f172a"/>
+  <text x="630" y="145" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">
+    Object Types
+  </text>
+  <text x="630" y="168" text-anchor="middle" font-size="13" fill="#cbd5e1">
+    stored by reference
+  </text>
+
+  <!-- Primitive list -->
+  <g font-size="14" font-weight="600" fill="#0f172a">
+    <rect x="70" y="220" width="105" height="45" rx="10" fill="#e0f2fe"/>
+    <text x="122" y="248" text-anchor="middle">String</text>
+
+    <rect x="185" y="220" width="105" height="45" rx="10" fill="#dcfce7"/>
+    <text x="237" y="248" text-anchor="middle">Number</text>
+
+    <rect x="300" y="220" width="105" height="45" rx="10" fill="#fef3c7"/>
+    <text x="352" y="248" text-anchor="middle">Boolean</text>
+
+    <rect x="70" y="280" width="105" height="45" rx="10" fill="#fee2e2"/>
+    <text x="122" y="308" text-anchor="middle">Undefined</text>
+
+    <rect x="185" y="280" width="105" height="45" rx="10" fill="#ede9fe"/>
+    <text x="237" y="308" text-anchor="middle">Null</text>
+
+    <rect x="300" y="280" width="105" height="45" rx="10" fill="#fae8ff"/>
+    <text x="352" y="308" text-anchor="middle">Symbol</text>
+
+    <rect x="185" y="340" width="105" height="45" rx="10" fill="#ccfbf1"/>
+    <text x="237" y="368" text-anchor="middle">BigInt</text>
+  </g>
+
+  <!-- Object list -->
+  <g font-size="14" font-weight="600" fill="#0f172a">
+    <rect x="500" y="220" width="110" height="55" rx="12" fill="#e0f2fe"/>
+    <text x="555" y="242" text-anchor="middle">Object</text>
+    <text x="555" y="262" text-anchor="middle" font-family="monospace">{}</text>
+
+    <rect x="650" y="220" width="110" height="55" rx="12" fill="#dcfce7"/>
+    <text x="705" y="242" text-anchor="middle">Array</text>
+    <text x="705" y="262" text-anchor="middle" font-family="monospace">[]</text>
+
+    <rect x="500" y="300" width="110" height="55" rx="12" fill="#fef3c7"/>
+    <text x="555" y="322" text-anchor="middle">Function</text>
+    <text x="555" y="342" text-anchor="middle" font-family="monospace">fn()</text>
+
+    <rect x="650" y="300" width="110" height="55" rx="12" fill="#ede9fe"/>
+    <text x="705" y="322" text-anchor="middle">Date</text>
+    <text x="705" y="342" text-anchor="middle" font-family="monospace">new Date()</text>
+  </g>
+
+  <!-- Footer code -->
+  <rect x="90" y="420" width="680" height="70" rx="14" fill="#0f172a"/>
+
+  <text x="115" y="450" font-size="14" fill="#22c55e" font-family="monospace">
+    const name = "Ishwar";      // primitive
+  </text>
+  <text x="115" y="473" font-size="14" fill="#38bdf8" font-family="monospace">
+    const user = { name: "Ishwar" };  const skills = [];  function greet() {}
+  </text>
+</svg>

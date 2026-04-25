@@ -1,0 +1,58 @@
+<svg width="820" height="520" viewBox="0 0 820 520" xmlns="http://www.w3.org/2000/svg">
+  <rect width="820" height="520" fill="#f8fafc"/>
+
+  <text x="410" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">
+    JavaScript Objects
+  </text>
+
+  <text x="410" y="72" text-anchor="middle" font-size="15" fill="#475569">
+    Objects store data as key-value pairs and are reference types
+  </text>
+
+  <!-- Object code box -->
+  <rect x="70" y="115" width="320" height="230" rx="14" fill="#0f172a"/>
+
+  <text x="95" y="150" font-size="14" fill="#22c55e" font-family="monospace">const user = {</text>
+  <text x="115" y="175" font-size="14" fill="#22c55e" font-family="monospace">name: "Ishwar",</text>
+  <text x="115" y="200" font-size="14" fill="#22c55e" font-family="monospace">age: 25,</text>
+  <text x="115" y="225" font-size="14" fill="#22c55e" font-family="monospace">isLoggedIn: true,</text>
+  <text x="115" y="250" font-size="14" fill="#22c55e" font-family="monospace">skills: ["JS", "React"],</text>
+  <text x="115" y="275" font-size="14" fill="#22c55e" font-family="monospace">address: { city: "Delhi" }</text>
+  <text x="95" y="300" font-size="14" fill="#22c55e" font-family="monospace">};</text>
+
+  <!-- Key Value Pair -->
+  <rect x="470" y="115" width="280" height="75" rx="12" fill="#e0f2fe" stroke="#38bdf8"/>
+  <text x="610" y="145" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">
+    Key : Value
+  </text>
+  <text x="610" y="170" text-anchor="middle" font-size="14" fill="#334155">
+    name : "Ishwar"
+  </text>
+
+  <!-- Access -->
+  <rect x="470" y="215" width="280" height="75" rx="12" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="610" y="245" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">
+    Access Value
+  </text>
+  <text x="610" y="270" text-anchor="middle" font-size="14" fill="#334155">
+    user.name → "Ishwar"
+  </text>
+
+  <!-- Update -->
+  <rect x="470" y="315" width="280" height="75" rx="12" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="610" y="345" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">
+    Update Value
+  </text>
+  <text x="610" y="370" text-anchor="middle" font-size="14" fill="#334155">
+    user.age = 26
+  </text>
+
+  <!-- Footer -->
+  <rect x="95" y="405" width="630" height="70" rx="14" fill="#ede9fe" stroke="#8b5cf6"/>
+  <text x="410" y="435" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">
+    Important Core JS Point
+  </text>
+  <text x="410" y="460" text-anchor="middle" font-size="14" fill="#334155">
+    Objects are mutable and copied by reference, not by direct value.
+  </text>
+</svg>
