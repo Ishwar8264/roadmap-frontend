@@ -1,0 +1,40 @@
+<svg width="960" height="680" viewBox="0 0 960 680" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="680" fill="#f8fafc"/>
+
+  <text x="480" y="44" text-anchor="middle" font-size="28" font-weight="700" fill="#0f172a">JavaScript Promise Flow</text>
+  <text x="480" y="74" text-anchor="middle" font-size="15" fill="#475569">Async work starts pending, then becomes fulfilled or rejected</text>
+
+  <rect x="330" y="110" width="300" height="75" rx="16" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+  <text x="480" y="140" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Async Task Starts</text>
+  <text x="480" y="165" text-anchor="middle" font-size="14" fill="#334155">fetch, timer, API call</text>
+
+  <line x1="480" y1="185" x2="480" y2="230" stroke="#64748b" stroke-width="3"/>
+
+  <rect x="350" y="230" width="260" height="75" rx="16" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+  <text x="480" y="260" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Pending</text>
+  <text x="480" y="285" text-anchor="middle" font-size="14" fill="#334155">waiting for result</text>
+
+  <line x1="410" y1="305" x2="260" y2="385" stroke="#16a34a" stroke-width="3"/>
+  <text x="325" y="350" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">resolve()</text>
+
+  <line x1="550" y1="305" x2="700" y2="385" stroke="#ef4444" stroke-width="3"/>
+  <text x="635" y="350" text-anchor="middle" font-size="14" font-weight="700" fill="#991b1b">reject()</text>
+
+  <rect x="90" y="390" width="300" height="90" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="240" y="425" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Fulfilled</text>
+  <text x="240" y="452" text-anchor="middle" font-size="14" fill="#334155">success result goes to then()</text>
+
+  <rect x="570" y="390" width="300" height="90" rx="16" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+  <text x="720" y="425" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Rejected</text>
+  <text x="720" y="452" text-anchor="middle" font-size="14" fill="#334155">error goes to catch()</text>
+
+  <line x1="240" y1="480" x2="410" y2="555" stroke="#64748b" stroke-width="3"/>
+  <line x1="720" y1="480" x2="550" y2="555" stroke="#64748b" stroke-width="3"/>
+
+  <rect x="330" y="555" width="300" height="70" rx="16" fill="#ede9fe" stroke="#8b5cf6" stroke-width="3"/>
+  <text x="480" y="584" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">finally()</text>
+  <text x="480" y="608" text-anchor="middle" font-size="14" fill="#334155">runs after success or failure</text>
+
+  <rect x="210" y="640" width="540" height="30" rx="10" fill="#0f172a"/>
+  <text x="480" y="660" text-anchor="middle" font-size="13" fill="#22c55e" font-family="monospace">promise.then(data).catch(error).finally(done)</text>
+</svg>
