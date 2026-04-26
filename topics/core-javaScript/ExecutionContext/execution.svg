@@ -1,0 +1,110 @@
+<svg width="1280" height="820" viewBox="0 0 1280 820" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="820" fill="#f8fafc"/>
+
+  <text x="640" y="45" text-anchor="middle" font-size="34" font-weight="700" fill="#0f172a">JavaScript Execution Context</text>
+  <text x="640" y="78" text-anchor="middle" font-size="16" fill="#475569">Creation phase, execution phase, and call stack push/pop visualization</text>
+
+  <!-- Code Panel -->
+  <rect x="55" y="125" width="345" height="290" rx="22" fill="#0f172a"/>
+  <text x="82" y="162" font-size="15" fill="#94a3b8" font-family="monospace">// source code</text>
+  <text x="82" y="200" font-size="15" fill="#22c55e" font-family="monospace">var x = 10;</text>
+  <text x="82" y="238" font-size="15" fill="#38bdf8" font-family="monospace">function foo() {</text>
+  <text x="104" y="268" font-size="15" fill="#38bdf8" font-family="monospace">var y = 20;</text>
+  <text x="104" y="298" font-size="15" fill="#38bdf8" font-family="monospace">console.log(x + y);</text>
+  <text x="82" y="328" font-size="15" fill="#38bdf8" font-family="monospace">}</text>
+  <text x="82" y="370" font-size="15" fill="#f59e0b" font-family="monospace">foo();</text>
+
+  <!-- Center Engine Panel -->
+  <rect x="450" y="125" width="380" height="520" rx="26" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="640" y="165" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">JS Engine Work</text>
+
+  <!-- GEC -->
+  <rect x="490" y="195" width="300" height="80" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+  <text x="640" y="228" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Global Execution Context</text>
+  <text x="640" y="253" text-anchor="middle" font-size="14" fill="#334155">created before code runs</text>
+
+  <!-- Memory -->
+  <rect x="490" y="315" width="300" height="105" rx="18" fill="#ede9fe" stroke="#8b5cf6" stroke-width="3"/>
+  <text x="640" y="350" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">1. Memory Phase</text>
+  <text x="640" y="378" text-anchor="middle" font-size="14" fill="#334155">x = undefined</text>
+  <text x="640" y="402" text-anchor="middle" font-size="14" fill="#334155">foo = function body</text>
+
+  <!-- Execution -->
+  <rect x="490" y="465" width="300" height="105" rx="18" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+  <text x="640" y="500" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">2. Execution Phase</text>
+  <text x="640" y="528" text-anchor="middle" font-size="14" fill="#334155">x = 10</text>
+  <text x="640" y="552" text-anchor="middle" font-size="14" fill="#334155">foo() creates Function EC</text>
+
+  <!-- Call Stack -->
+  <rect x="900" y="125" width="325" height="520" rx="26" fill="#f8fafc" stroke="#0f172a" stroke-width="3"/>
+  <text x="1062" y="165" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Call Stack</text>
+  <text x="1062" y="192" text-anchor="middle" font-size="14" fill="#475569">last in, first out</text>
+
+  <!-- Stack Slot 1 -->
+  <rect x="945" y="525" width="235" height="75" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="2">
+    <animate attributeName="opacity" values="0;1;1" keyTimes="0;0.12;1" dur="9s" repeatCount="indefinite"/>
+  </rect>
+  <text x="1062" y="568" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">
+    <animate attributeName="opacity" values="0;1;1" keyTimes="0;0.12;1" dur="9s" repeatCount="indefinite"/>
+    Global EC
+  </text>
+
+  <!-- Stack Slot 2 -->
+  <rect x="945" y="430" width="235" height="75" rx="16" fill="#fef3c7" stroke="#f59e0b" stroke-width="2">
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.52;0.6;0.78;0.86;1" dur="9s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0 25;0 25;0 0;0 0;0 -20;0 -20" keyTimes="0;0.52;0.6;0.78;0.86;1" dur="9s" repeatCount="indefinite"/>
+  </rect>
+  <text x="1062" y="473" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.52;0.6;0.78;0.86;1" dur="9s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0 25;0 25;0 0;0 0;0 -20;0 -20" keyTimes="0;0.52;0.6;0.78;0.86;1" dur="9s" repeatCount="indefinite"/>
+    Function EC
+  </text>
+
+  <!-- Function Detail -->
+  <rect x="930" y="675" width="265" height="55" rx="16" fill="#0f172a">
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.58;0.64;0.78;0.86;1" dur="9s" repeatCount="indefinite"/>
+  </rect>
+  <text x="1062" y="708" text-anchor="middle" font-size="14" fill="#22c55e" font-family="monospace">
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.58;0.64;0.78;0.86;1" dur="9s" repeatCount="indefinite"/>
+    y = 20, output = 30
+  </text>
+
+  <!-- Flow paths -->
+  <path id="codeToGec" d="M400 230 L490 230" fill="none" stroke="#0284c7" stroke-width="4"/>
+  <path id="gecToMemory" d="M640 275 L640 315" fill="none" stroke="#8b5cf6" stroke-width="4"/>
+  <path id="memoryToExecution" d="M640 420 L640 465" fill="none" stroke="#ef4444" stroke-width="4"/>
+  <path id="executionToStack" d="M790 520 L945 470" fill="none" stroke="#f59e0b" stroke-width="4"/>
+  <path id="popToGlobal" d="M945 470 L790 520" fill="none" stroke="#64748b" stroke-width="4"/>
+
+  <!-- Animated moving dots -->
+  <circle r="11" fill="#0284c7">
+    <animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.16;1"><mpath href="#codeToGec"/></animateMotion>
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.16;0.18;1" dur="9s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="11" fill="#8b5cf6">
+    <animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.2;0.36;1"><mpath href="#gecToMemory"/></animateMotion>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2;0.22;0.36;0.38;1" dur="9s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="11" fill="#ef4444">
+    <animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.38;0.52;1"><mpath href="#memoryToExecution"/></animateMotion>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.38;0.4;0.52;0.54;1" dur="9s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="11" fill="#f59e0b">
+    <animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.55;0.68;1"><mpath href="#executionToStack"/></animateMotion>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.55;0.57;0.68;0.7;1" dur="9s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="11" fill="#64748b">
+    <animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.78;0.9;1"><mpath href="#popToGlobal"/></animateMotion>
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.78;0.8;0.9;1" dur="9s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Timeline -->
+  <rect x="110" y="755" width="1060" height="38" rx="14" fill="#0f172a"/>
+  <text x="640" y="779" text-anchor="middle" font-size="14" fill="#22c55e" font-family="monospace">
+    Flow: Code starts - Global EC - Memory Phase - Execution Phase - Function EC pushed - Function EC popped
+  </text>
+</svg>
