@@ -1,0 +1,171 @@
+<svg width="1280" height="760" viewBox="0 0 1280 760" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="760" fill="#f8fafc"/>
+
+  <text x="640" y="42" text-anchor="middle" font-size="32" font-weight="700" fill="#0f172a">
+    JavaScript Memory Model: Stack + Heap + Closure + Event Loop
+  </text>
+  <text x="640" y="74" text-anchor="middle" font-size="16" fill="#475569">
+    Function calls use Stack, objects/functions live in Heap, closures preserve variables, async callbacks return through Event Loop
+  </text>
+
+  <!-- Code -->
+  <rect x="35" y="120" width="330" height="420" rx="20" fill="#0f172a"/>
+  <text x="60" y="155" font-size="14" fill="#94a3b8" font-family="monospace">// example</text>
+  <text x="60" y="190" font-size="14" fill="#22c55e" font-family="monospace">function outer() {</text>
+  <text x="82" y="220" font-size="14" fill="#22c55e" font-family="monospace">let count = 0;</text>
+  <text x="82" y="255" font-size="14" fill="#38bdf8" font-family="monospace">setTimeout(() =&gt; {</text>
+  <text x="104" y="285" font-size="14" fill="#38bdf8" font-family="monospace">count++;</text>
+  <text x="104" y="315" font-size="14" fill="#38bdf8" font-family="monospace">console.log(count);</text>
+  <text x="82" y="345" font-size="14" fill="#38bdf8" font-family="monospace">}, 1000);</text>
+  <text x="82" y="385" font-size="14" fill="#a78bfa" font-family="monospace">return function inner() {</text>
+  <text x="104" y="415" font-size="14" fill="#a78bfa" font-family="monospace">count++;</text>
+  <text x="82" y="445" font-size="14" fill="#a78bfa" font-family="monospace">}</text>
+  <text x="60" y="475" font-size="14" fill="#22c55e" font-family="monospace">}</text>
+  <text x="60" y="515" font-size="14" fill="#f59e0b" font-family="monospace">const fn = outer();</text>
+
+  <!-- Stack -->
+  <rect x="410" y="120" width="240" height="420" rx="22" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+  <text x="530" y="160" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Stack</text>
+  <text x="530" y="188" text-anchor="middle" font-size="14" fill="#334155">execution contexts</text>
+
+  <rect x="445" y="435" width="170" height="65" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2">
+    <animate attributeName="opacity" values="0;1;1" keyTimes="0;0.08;1" dur="10s" repeatCount="indefinite"/>
+  </rect>
+  <text x="530" y="473" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">
+    <animate attributeName="opacity" values="0;1;1" keyTimes="0;0.08;1" dur="10s" repeatCount="indefinite"/>
+    Global EC
+  </text>
+
+  <rect x="445" y="350" width="170" height="65" rx="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="2">
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.18;0.24;0.48;0.56;1" dur="10s" repeatCount="indefinite"/>
+  </rect>
+  <text x="530" y="388" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.18;0.24;0.48;0.56;1" dur="10s" repeatCount="indefinite"/>
+    outer EC
+  </text>
+
+  <rect x="445" y="265" width="170" height="65" rx="14" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2">
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.58;0.66;0.78;0.86;1" dur="10s" repeatCount="indefinite"/>
+  </rect>
+  <text x="530" y="303" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.58;0.66;0.78;0.86;1" dur="10s" repeatCount="indefinite"/>
+    callback EC
+  </text>
+
+  <!-- Heap -->
+  <rect x="700" y="120" width="270" height="420" rx="22" fill="#fff7ed" stroke="#f59e0b" stroke-width="3"/>
+  <text x="835" y="160" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Heap</text>
+  <text x="835" y="188" text-anchor="middle" font-size="14" fill="#334155">objects, functions, closures</text>
+
+  <rect x="735" y="225" width="200" height="80" rx="15" fill="#dcfce7" stroke="#16a34a" stroke-width="2">
+    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.28;0.36;1" dur="10s" repeatCount="indefinite"/>
+  </rect>
+  <text x="835" y="255" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">
+    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.28;0.36;1" dur="10s" repeatCount="indefinite"/>
+    Closure Cell
+  </text>
+  <text x="835" y="280" text-anchor="middle" font-size="14" fill="#334155">
+    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.28;0.36;1" dur="10s" repeatCount="indefinite"/>
+    count = 0
+  </text>
+
+  <rect x="735" y="340" width="200" height="80" rx="15" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2">
+    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.36;0.44;1" dur="10s" repeatCount="indefinite"/>
+  </rect>
+  <text x="835" y="370" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">
+    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.36;0.44;1" dur="10s" repeatCount="indefinite"/>
+    inner function
+  </text>
+  <text x="835" y="395" text-anchor="middle" font-size="14" fill="#334155">
+    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.36;0.44;1" dur="10s" repeatCount="indefinite"/>
+    remembers count
+  </text>
+
+  <!-- Web API / Queues -->
+  <rect x="1020" y="120" width="220" height="130" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="1130" y="160" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Web APIs</text>
+  <text x="1130" y="190" text-anchor="middle" font-size="14" fill="#334155">setTimeout</text>
+  <text x="1130" y="215" text-anchor="middle" font-size="14" fill="#334155">timer runs outside stack</text>
+
+  <rect x="1020" y="310" width="220" height="130" rx="20" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+  <text x="1130" y="350" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Callback Queue</text>
+  <text x="1130" y="380" text-anchor="middle" font-size="14" fill="#334155">macrotask</text>
+  <text x="1130" y="405" text-anchor="middle" font-size="14" fill="#334155">timer callback waits</text>
+
+  <rect x="1020" y="500" width="220" height="95" rx="20" fill="#0f172a"/>
+  <text x="1130" y="540" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">Event Loop</text>
+  <text x="1130" y="568" text-anchor="middle" font-size="14" fill="#cbd5e1">pushes callback</text>
+
+  <!-- Paths -->
+  <path id="codeToStack" d="M365 515 L445 465" fill="none" stroke="#0284c7" stroke-width="4"/>
+  <path id="outerPush" d="M365 515 L445 382" fill="none" stroke="#f59e0b" stroke-width="4"/>
+  <path id="stackToHeapClosure" d="M615 382 L735 265" fill="none" stroke="#16a34a" stroke-width="4"/>
+  <path id="stackToHeapFn" d="M615 382 L735 380" fill="none" stroke="#8b5cf6" stroke-width="4"/>
+  <path id="timeoutToApi" d="M615 382 L1020 185" fill="none" stroke="#16a34a" stroke-width="4"/>
+  <path id="apiToQueue" d="M1130 250 L1130 310" fill="none" stroke="#ef4444" stroke-width="4"/>
+  <path id="queueToLoop" d="M1130 440 L1130 500" fill="none" stroke="#ef4444" stroke-width="4"/>
+  <path id="loopToStack" d="M1020 550 L615 298" fill="none" stroke="#64748b" stroke-width="4"/>
+  <path id="callbackReadsClosure" d="M615 298 L735 265" fill="none" stroke="#8b5cf6" stroke-width="4"/>
+
+  <!-- Animated dots -->
+  <circle r="10" fill="#0284c7">
+    <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.12;1"><mpath href="#codeToStack"/></animateMotion>
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.12;0.14;1" dur="10s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="10" fill="#f59e0b">
+    <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.16;0.28;1"><mpath href="#outerPush"/></animateMotion>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.16;0.18;0.28;0.3;1" dur="10s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="10" fill="#16a34a">
+    <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.3;0.42;1"><mpath href="#stackToHeapClosure"/></animateMotion>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3;0.32;0.42;0.44;1" dur="10s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="10" fill="#8b5cf6">
+    <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.36;0.48;1"><mpath href="#stackToHeapFn"/></animateMotion>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.36;0.38;0.48;0.5;1" dur="10s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="10" fill="#16a34a">
+    <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.42;0.55;1"><mpath href="#timeoutToApi"/></animateMotion>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.42;0.44;0.55;0.57;1" dur="10s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="10" fill="#ef4444">
+    <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.56;0.66;1"><mpath href="#apiToQueue"/></animateMotion>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.56;0.58;0.66;0.68;1" dur="10s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="10" fill="#ef4444">
+    <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.68;0.78;1"><mpath href="#queueToLoop"/></animateMotion>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.68;0.7;0.78;0.8;1" dur="10s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="10" fill="#64748b">
+    <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.8;0.9;1"><mpath href="#loopToStack"/></animateMotion>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8;0.82;0.9;0.92;1" dur="10s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="10" fill="#8b5cf6">
+    <animateMotion dur="10s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.9;0.98;1"><mpath href="#callbackReadsClosure"/></animateMotion>
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.9;0.92;0.98;1" dur="10s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Labels -->
+  <text x="380" y="560" font-size="14" font-weight="700" fill="#0284c7">1. global code starts</text>
+  <text x="380" y="330" font-size="14" font-weight="700" fill="#f59e0b">2. outer() pushed</text>
+  <text x="645" y="315" font-size="14" font-weight="700" fill="#16a34a">3. count kept alive</text>
+  <text x="645" y="430" font-size="14" font-weight="700" fill="#8b5cf6">4. function reference saved</text>
+  <text x="835" y="115" font-size="14" font-weight="700" fill="#16a34a">5. timer goes to Web API</text>
+  <text x="1150" y="285" text-anchor="middle" font-size="14" font-weight="700" fill="#ef4444">6. callback waits</text>
+  <text x="935" y="620" font-size="14" font-weight="700" fill="#64748b">7. event loop pushes callback</text>
+  <text x="650" y="245" font-size="14" font-weight="700" fill="#8b5cf6">8. callback reads closure</text>
+
+  <!-- Footer -->
+  <rect x="120" y="680" width="1040" height="55" rx="16" fill="#0f172a"/>
+  <text x="640" y="713" text-anchor="middle" font-size="15" fill="#22c55e" font-family="monospace">
+    Stack runs calls | Heap stores closures/functions | Web API waits | Event Loop returns callbacks to Stack
+  </text>
+</svg>
