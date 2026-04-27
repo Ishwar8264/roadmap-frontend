@@ -1,0 +1,51 @@
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="460" fill="#111827"/>
+
+  <text x="450" y="45" text-anchor="middle" fill="#ffffff" font-size="28" font-family="Arial" font-weight="bold">
+    TypeScript Type Alias
+  </text>
+
+  <text x="450" y="80" text-anchor="middle" fill="#d1d5db" font-size="16" font-family="Arial">
+    Type alias gives a name to a type
+  </text>
+
+  <rect x="70" y="120" width="230" height="110" rx="16" fill="#1f2937" stroke="#a78bfa" stroke-width="3"/>
+  <text x="185" y="155" text-anchor="middle" fill="#a78bfa" font-size="21" font-family="Arial" font-weight="bold">
+    Object Type
+  </text>
+  <text x="100" y="195" fill="#e5e7eb" font-size="17" font-family="monospace">
+    type User = {...}
+  </text>
+
+  <rect x="335" y="120" width="230" height="110" rx="16" fill="#1f2937" stroke="#38bdf8" stroke-width="3"/>
+  <text x="450" y="155" text-anchor="middle" fill="#38bdf8" font-size="21" font-family="Arial" font-weight="bold">
+    Union Type
+  </text>
+  <text x="365" y="195" fill="#e5e7eb" font-size="17" font-family="monospace">
+    "open" | "closed"
+  </text>
+
+  <rect x="600" y="120" width="230" height="110" rx="16" fill="#1f2937" stroke="#22c55e" stroke-width="3"/>
+  <text x="715" y="155" text-anchor="middle" fill="#22c55e" font-size="21" font-family="Arial" font-weight="bold">
+    Function Type
+  </text>
+  <text x="625" y="195" fill="#e5e7eb" font-size="17" font-family="monospace">
+    (a, b) =&gt; number
+  </text>
+
+  <line x1="185" y1="245" x2="185" y2="300" stroke="#9ca3af" stroke-width="3"/>
+  <line x1="450" y1="245" x2="450" y2="300" stroke="#9ca3af" stroke-width="3"/>
+  <line x1="715" y1="245" x2="715" y2="300" stroke="#9ca3af" stroke-width="3"/>
+
+  <rect x="210" y="300" width="480" height="95" rx="18" fill="#1f2937" stroke="#facc15" stroke-width="3"/>
+  <text x="450" y="335" text-anchor="middle" fill="#facc15" font-size="22" font-family="Arial" font-weight="bold">
+    type is flexible
+  </text>
+  <text x="450" y="370" text-anchor="middle" fill="#f9fafb" font-size="17" font-family="Arial">
+    Best for union, intersection, function, and complex types
+  </text>
+
+  <text x="450" y="430" text-anchor="middle" fill="#d1d5db" font-size="16" font-family="Arial">
+    Practical rule: use type when you need more flexibility
+  </text>
+</svg>
