@@ -1,0 +1,45 @@
+<svg width="900" height="430" viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="430" fill="#0f172a"/>
+
+  <text x="450" y="45" text-anchor="middle" fill="#ffffff" font-size="28" font-family="Arial" font-weight="bold">
+    TypeScript Enum
+  </text>
+
+  <text x="450" y="80" text-anchor="middle" fill="#cbd5e1" font-size="16" font-family="Arial">
+    Enum stores a fixed set of named values
+  </text>
+
+  <rect x="90" y="125" width="720" height="170" rx="20" fill="#1e293b" stroke="#f97316" stroke-width="3"/>
+
+  <text x="450" y="165" text-anchor="middle" fill="#f97316" font-size="23" font-family="Arial" font-weight="bold">
+    enum Status
+  </text>
+
+  <rect x="135" y="200" width="170" height="55" rx="14" fill="#334155"/>
+  <text x="220" y="235" text-anchor="middle" fill="#f8fafc" font-size="18" font-family="Arial" font-weight="bold">
+    PENDING
+  </text>
+
+  <rect x="365" y="200" width="170" height="55" rx="14" fill="#334155"/>
+  <text x="450" y="235" text-anchor="middle" fill="#f8fafc" font-size="18" font-family="Arial" font-weight="bold">
+    SUCCESS
+  </text>
+
+  <rect x="595" y="200" width="170" height="55" rx="14" fill="#334155"/>
+  <text x="680" y="235" text-anchor="middle" fill="#f8fafc" font-size="18" font-family="Arial" font-weight="bold">
+    ERROR
+  </text>
+
+  <line x1="450" y1="300" x2="450" y2="345" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="235" y="345" width="430" height="45" rx="12" fill="#334155"/>
+  <text x="450" y="374" text-anchor="middle" fill="#e2e8f0" font-size="17" font-family="monospace">
+    const status = Status.SUCCESS
+  </text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>
