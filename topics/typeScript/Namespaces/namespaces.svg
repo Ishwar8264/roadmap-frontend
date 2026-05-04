@@ -1,0 +1,20 @@
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="460" fill="#0f172a"/>
+
+  <text x="450" y="45" text-anchor="middle" fill="#ffffff" font-size="28" font-family="Arial" font-weight="bold">TypeScript Namespace</text>
+  <text x="450" y="78" text-anchor="middle" fill="#cbd5e1" font-size="16" font-family="Arial">Namespace groups related code under one name</text>
+
+  <rect x="150" y="120" width="600" height="230" rx="20" fill="#1e293b" stroke="#f97316" stroke-width="3"/>
+  <text x="450" y="160" text-anchor="middle" fill="#f97316" font-size="24" font-family="Arial" font-weight="bold">namespace Auth</text>
+
+  <rect x="200" y="205" width="210" height="80" rx="14" fill="#334155"/>
+  <text x="305" y="238" text-anchor="middle" fill="#fff" font-size="18" font-family="Arial" font-weight="bold">User Type</text>
+  <text x="305" y="265" text-anchor="middle" fill="#cbd5e1" font-size="15" font-family="monospace">Auth.User</text>
+
+  <rect x="490" y="205" width="210" height="80" rx="14" fill="#334155"/>
+  <text x="595" y="238" text-anchor="middle" fill="#fff" font-size="18" font-family="Arial" font-weight="bold">login()</text>
+  <text x="595" y="265" text-anchor="middle" fill="#cbd5e1" font-size="15" font-family="monospace">Auth.login()</text>
+
+  <rect x="210" y="385" width="480" height="38" rx="10" fill="#334155"/>
+  <text x="450" y="410" text-anchor="middle" fill="#f8fafc" font-size="16" font-family="Arial">Old-style grouping. Prefer modules in modern apps.</text>
+</svg>
