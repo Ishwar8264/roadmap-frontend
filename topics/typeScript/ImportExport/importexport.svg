@@ -1,0 +1,34 @@
+<svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#111827"/>
+
+  <text x="450" y="45" text-anchor="middle" fill="#ffffff" font-size="28" font-family="Arial" font-weight="bold">Import / Export</text>
+  <text x="450" y="78" text-anchor="middle" fill="#d1d5db" font-size="16" font-family="Arial">Export sends code out. Import brings code in.</text>
+
+  <rect x="70" y="125" width="330" height="260" rx="18" fill="#1f2937" stroke="#38bdf8" stroke-width="3"/>
+  <text x="235" y="160" text-anchor="middle" fill="#38bdf8" font-size="22" font-family="Arial" font-weight="bold">Export File</text>
+
+  <rect x="105" y="195" width="250" height="55" rx="12" fill="#374151"/>
+  <text x="230" y="230" text-anchor="middle" fill="#fff" font-size="17" font-family="monospace">export const name</text>
+
+  <rect x="105" y="285" width="250" height="55" rx="12" fill="#374151"/>
+  <text x="230" y="320" text-anchor="middle" fill="#fff" font-size="17" font-family="monospace">export default</text>
+
+  <line x1="420" y1="255" x2="500" y2="255" stroke="#9ca3af" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="460" y="235" text-anchor="middle" fill="#d1d5db" font-size="15" font-family="Arial">import</text>
+
+  <rect x="530" y="125" width="300" height="260" rx="18" fill="#1f2937" stroke="#22c55e" stroke-width="3"/>
+  <text x="680" y="160" text-anchor="middle" fill="#22c55e" font-size="22" font-family="Arial" font-weight="bold">Import File</text>
+
+  <text x="560" y="220" fill="#e5e7eb" font-size="16" font-family="monospace">import { name }</text>
+  <text x="560" y="265" fill="#e5e7eb" font-size="16" font-family="monospace">import Button</text>
+  <text x="560" y="310" fill="#e5e7eb" font-size="16" font-family="monospace">from "./file"</text>
+
+  <rect x="190" y="430" width="520" height="38" rx="10" fill="#374151"/>
+  <text x="450" y="455" text-anchor="middle" fill="#f9fafb" font-size="16" font-family="Arial">Named export uses { }, default export does not</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+</svg>
