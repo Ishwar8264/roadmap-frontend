@@ -1,0 +1,57 @@
+<svg width="920" height="560" viewBox="0 0 920 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="920" height="560" fill="#111827"/>
+
+  <text x="460" y="45" text-anchor="middle" fill="#ffffff" font-size="30" font-family="Arial" font-weight="bold">
+    TypeScript Utility Types
+  </text>
+
+  <text x="460" y="78" text-anchor="middle" fill="#d1d5db" font-size="16" font-family="Arial">
+    Utility types are built-in helpers for transforming existing types
+  </text>
+
+  <rect x="55" y="120" width="230" height="130" rx="16" fill="#1f2937" stroke="#38bdf8" stroke-width="3"/>
+  <text x="170" y="155" text-anchor="middle" fill="#38bdf8" font-size="21" font-family="Arial" font-weight="bold">
+    Original Type
+  </text>
+  <text x="85" y="195" fill="#e5e7eb" font-size="16" font-family="monospace">type User = {</text>
+  <text x="105" y="222" fill="#e5e7eb" font-size="16" font-family="monospace">id, name, email</text>
+  <text x="85" y="245" fill="#e5e7eb" font-size="16" font-family="monospace">}</text>
+
+  <line x1="300" y1="185" x2="390" y2="185" stroke="#9ca3af" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="410" y="110" width="455" height="330" rx="20" fill="#1f2937" stroke="#facc15" stroke-width="3"/>
+  <text x="637" y="148" text-anchor="middle" fill="#facc15" font-size="23" font-family="Arial" font-weight="bold">
+    Utility Helpers
+  </text>
+
+  <rect x="445" y="175" width="180" height="70" rx="12" fill="#374151"/>
+  <text x="535" y="204" text-anchor="middle" fill="#ffffff" font-size="17" font-family="Arial" font-weight="bold">Partial&lt;User&gt;</text>
+  <text x="535" y="227" text-anchor="middle" fill="#d1d5db" font-size="14" font-family="Arial">all fields optional</text>
+
+  <rect x="655" y="175" width="180" height="70" rx="12" fill="#374151"/>
+  <text x="745" y="204" text-anchor="middle" fill="#ffffff" font-size="17" font-family="Arial" font-weight="bold">Pick&lt;User&gt;</text>
+  <text x="745" y="227" text-anchor="middle" fill="#d1d5db" font-size="14" font-family="Arial">select fields</text>
+
+  <rect x="445" y="275" width="180" height="70" rx="12" fill="#374151"/>
+  <text x="535" y="304" text-anchor="middle" fill="#ffffff" font-size="17" font-family="Arial" font-weight="bold">Omit&lt;User&gt;</text>
+  <text x="535" y="327" text-anchor="middle" fill="#d1d5db" font-size="14" font-family="Arial">remove fields</text>
+
+  <rect x="655" y="275" width="180" height="70" rx="12" fill="#374151"/>
+  <text x="745" y="304" text-anchor="middle" fill="#ffffff" font-size="17" font-family="Arial" font-weight="bold">Readonly&lt;User&gt;</text>
+  <text x="745" y="327" text-anchor="middle" fill="#d1d5db" font-size="14" font-family="Arial">cannot change</text>
+
+  <text x="637" y="395" text-anchor="middle" fill="#e5e7eb" font-size="16" font-family="monospace">
+    type UpdateUser = Partial&lt;User&gt;
+  </text>
+
+  <rect x="160" y="480" width="600" height="45" rx="12" fill="#374151"/>
+  <text x="460" y="509" text-anchor="middle" fill="#f9fafb" font-size="17" font-family="Arial">
+    Best for forms, API payloads, card data, and readonly objects
+  </text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+</svg>
