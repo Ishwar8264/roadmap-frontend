@@ -1,0 +1,135 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1020"/>
+      <stop offset="55%" stop-color="#17133a"/>
+      <stop offset="100%" stop-color="#0d1b2a"/>
+    </linearGradient>
+    <linearGradient id="vite" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#41d1ff"/>
+      <stop offset="55%" stop-color="#bd34fe"/>
+      <stop offset="100%" stop-color="#ffea83"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#8be9fd"/>
+    </marker>
+    <style>
+      .title{font:800 38px Inter,Arial,sans-serif;fill:#fff}
+      .subtitle{font:500 15px Inter,Arial,sans-serif;fill:#cbd5e1}
+      .label{font:800 18px Inter,Arial,sans-serif;fill:#ffffff}
+      .small{font:500 13px Inter,Arial,sans-serif;fill:#cbd5e1}
+      .tiny{font:600 12px Inter,Arial,sans-serif;fill:#a7f3d0}
+      .box{fill:#17172f;stroke:#334155;stroke-width:1.5;rx:20;filter:url(#shadow)}
+      .box2{fill:#111827;stroke:#475569;stroke-width:1.5;rx:18;filter:url(#shadow)}
+      .pill{fill:#0b1220;stroke:#334155;stroke-width:1;rx:12}
+      .line{stroke:#8be9fd;stroke-width:3;fill:none;marker-end:url(#arrow);stroke-linecap:round}
+      .dash{stroke:#facc15;stroke-width:3;stroke-dasharray:8 8;fill:none;marker-end:url(#arrow);stroke-linecap:round}
+      .purple{stroke:#c084fc}
+      .green{stroke:#86efac}
+      .node{fill:url(#vite)}
+      .pulse{transform-origin:center;animation:pulse 2.8s ease-in-out infinite}
+      .moveDev{stroke-dasharray:14 220;stroke-dashoffset:0;animation:flow 4s linear infinite}
+      .moveBuild{stroke-dasharray:14 220;stroke-dashoffset:0;animation:flow 5s linear infinite}
+      .hot{animation:hot 2.2s ease-in-out infinite}
+      .blink{animation:blink 2.4s ease-in-out infinite}
+      @keyframes flow{to{stroke-dashoffset:-235}}
+      @keyframes pulse{0%,100%{opacity:.75;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
+      @keyframes hot{0%,100%{fill:#f97316}50%{fill:#22c55e}}
+      @keyframes blink{0%,100%{opacity:.45}50%{opacity:1}}
+    </style>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <circle cx="1020" cy="95" r="190" fill="#7c3aed" opacity="0.12"/>
+  <circle cx="160" cy="670" r="220" fill="#06b6d4" opacity="0.10"/>
+
+  <text x="60" y="62" class="title">Vite Build Tool Flow</text>
+  <text x="62" y="90" class="subtitle">Fast dev server using native ES Modules + optimized production build using Rollup</text>
+
+  <!-- Center Vite core -->
+  <rect x="445" y="112" width="310" height="130" class="box"/>
+  <polygon class="node pulse" points="600,132 660,158 620,220 530,220 572,158"/>
+  <text x="552" y="180" class="label">VITE</text>
+  <text x="505" y="212" class="small">Dev server + build orchestrator</text>
+
+  <!-- Source -->
+  <rect x="60" y="130" width="300" height="160" class="box2"/>
+  <text x="90" y="170" class="label">Source Code</text>
+  <text x="90" y="203" class="small">index.html</text>
+  <text x="90" y="228" class="small">src/main.tsx / main.jsx</text>
+  <text x="90" y="253" class="small">React components, CSS, assets</text>
+
+  <path class="line moveDev" d="M360 205 C395 205 410 178 445 178"/>
+
+  <!-- Dev branch -->
+  <rect x="60" y="360" width="490" height="300" class="box"/>
+  <text x="95" y="400" class="label">Development Mode</text>
+  <text x="95" y="426" class="small">Command: npm run dev</text>
+
+  <rect x="90" y="462" width="170" height="70" class="pill"/>
+  <text x="115" y="492" class="tiny">Native ESM</text>
+  <text x="112" y="515" class="small">No full bundle first</text>
+
+  <rect x="315" y="462" width="180" height="70" class="pill"/>
+  <text x="348" y="492" class="tiny">esbuild</text>
+  <text x="337" y="515" class="small">Pre-bundle deps</text>
+
+  <rect x="90" y="565" width="170" height="70" class="pill"/>
+  <text x="125" y="595" class="tiny hot">HMR</text>
+  <text x="111" y="618" class="small">Update changed file</text>
+
+  <rect x="315" y="565" width="180" height="70" class="pill"/>
+  <text x="356" y="595" class="tiny">Browser</text>
+  <text x="340" y="618" class="small">Loads modules fast</text>
+
+  <path class="line green moveDev" d="M175 532 L175 565"/>
+  <path class="line green moveDev" d="M260 497 L315 497"/>
+  <path class="line green moveDev" d="M260 600 L315 600"/>
+  <path class="dash moveDev" d="M405 565 C405 545 390 532 390 532"/>
+
+  <path class="line green moveDev" d="M520 242 C440 310 315 320 305 360"/>
+
+  <!-- Build branch -->
+  <rect x="650" y="360" width="490" height="300" class="box"/>
+  <text x="685" y="400" class="label">Production Build</text>
+  <text x="685" y="426" class="small">Command: npm run build</text>
+
+  <rect x="680" y="462" width="170" height="70" class="pill"/>
+  <text x="723" y="492" class="tiny">Rollup</text>
+  <text x="704" y="515" class="small">Final bundling</text>
+
+  <rect x="925" y="462" width="180" height="70" class="pill"/>
+  <text x="962" y="492" class="tiny">Tree-shaking</text>
+  <text x="960" y="515" class="small">Remove unused code</text>
+
+  <rect x="680" y="565" width="170" height="70" class="pill"/>
+  <text x="716" y="595" class="tiny">Optimize</text>
+  <text x="704" y="618" class="small">Minify + split chunks</text>
+
+  <rect x="925" y="565" width="180" height="70" class="pill"/>
+  <text x="975" y="595" class="tiny blink">dist/</text>
+  <text x="956" y="618" class="small">HTML, JS, CSS, assets</text>
+
+  <path class="line purple moveBuild" d="M850 497 L925 497"/>
+  <path class="line purple moveBuild" d="M1015 532 L1015 565"/>
+  <path class="line purple moveBuild" d="M925 600 L850 600"/>
+  <path class="line purple moveBuild" d="M765 565 L765 532"/>
+
+  <path class="line purple moveBuild" d="M680 242 C760 310 895 320 895 360"/>
+
+  <!-- Top notes -->
+  <rect x="805" y="130" width="335" height="160" class="box2"/>
+  <text x="835" y="170" class="label">Why Vite feels fast?</text>
+  <text x="835" y="204" class="small">1. Starts server without bundling whole app</text>
+  <text x="835" y="230" class="small">2. Browser requests modules on demand</text>
+  <text x="835" y="256" class="small">3. HMR updates only changed modules</text>
+
+  <path class="dash moveDev" d="M755 178 C790 178 785 178 805 178"/>
+
+  <!-- Footer legend -->
+  <rect x="60" y="698" width="1080" height="38" rx="15" fill="#0b1220" stroke="#334155"/>
+  <text x="86" y="722" class="small">Mental model: Development = fast ESM dev server + HMR. Production = Rollup bundling + optimization + dist output.</text>
+</svg>
