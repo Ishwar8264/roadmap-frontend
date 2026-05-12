@@ -1,0 +1,1 @@
+//? Generic means reusable type.

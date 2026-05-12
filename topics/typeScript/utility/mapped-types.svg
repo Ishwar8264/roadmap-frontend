@@ -1,0 +1,49 @@
+<svg width="920" height="540" viewBox="0 0 920 540" xmlns="http://www.w3.org/2000/svg">
+  <rect width="920" height="540" fill="#0f172a"/>
+
+  <text x="460" y="45" text-anchor="middle" fill="#ffffff" font-size="30" font-family="Arial" font-weight="bold">
+    TypeScript Mapped Types
+  </text>
+
+  <text x="460" y="78" text-anchor="middle" fill="#cbd5e1" font-size="16" font-family="Arial">
+    Mapped type creates a new type by looping over keys of another type
+  </text>
+
+  <rect x="70" y="120" width="260" height="210" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+  <text x="200" y="155" text-anchor="middle" fill="#38bdf8" font-size="22" font-family="Arial" font-weight="bold">
+    Original Type
+  </text>
+
+  <text x="100" y="205" fill="#e2e8f0" font-size="17" font-family="monospace">type User = {</text>
+  <text x="120" y="240" fill="#e2e8f0" font-size="17" font-family="monospace">name: string;</text>
+  <text x="120" y="275" fill="#e2e8f0" font-size="17" font-family="monospace">email: string;</text>
+  <text x="100" y="310" fill="#e2e8f0" font-size="17" font-family="monospace">}</text>
+
+  <line x1="350" y1="225" x2="470" y2="225" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="410" y="205" text-anchor="middle" fill="#cbd5e1" font-size="15" font-family="Arial">
+    loop keys
+  </text>
+
+  <rect x="500" y="120" width="350" height="210" rx="18" fill="#1e293b" stroke="#22c55e" stroke-width="3"/>
+  <text x="675" y="155" text-anchor="middle" fill="#22c55e" font-size="22" font-family="Arial" font-weight="bold">
+    New Type
+  </text>
+
+  <text x="530" y="205" fill="#e2e8f0" font-size="17" font-family="monospace">type UserPermissions = {</text>
+  <text x="550" y="240" fill="#facc15" font-size="17" font-family="monospace">[Key in keyof User]: boolean;</text>
+  <text x="530" y="275" fill="#e2e8f0" font-size="17" font-family="monospace">}</text>
+
+  <rect x="210" y="380" width="500" height="90" rx="16" fill="#334155"/>
+  <text x="460" y="414" text-anchor="middle" fill="#f8fafc" font-size="18" font-family="Arial" font-weight="bold">
+    Result
+  </text>
+  <text x="460" y="445" text-anchor="middle" fill="#e2e8f0" font-size="17" font-family="monospace">
+    { name: boolean; email: boolean; }
+  </text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>
