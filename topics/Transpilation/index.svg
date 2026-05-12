@@ -1,0 +1,118 @@
+<svg width="920" height="520" viewBox="0 0 920 520" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: 800 30px Arial, sans-serif; fill: #f8fafc; }
+    .subtitle { font: 500 16px Arial, sans-serif; fill: #cbd5e1; }
+    .boxTitle { font: 800 22px Arial, sans-serif; }
+    .code { font: 700 17px monospace; fill: #e5e7eb; }
+    .yellow { fill: #facc15; }
+    .muted { fill: #cbd5e1; font: 700 14px Arial, sans-serif; }
+
+    .dash {
+      stroke-dasharray: 12 10;
+      animation: moveDash 1.8s linear infinite;
+    }
+
+    .token {
+      animation: tokenMove 3s ease-in-out infinite;
+    }
+
+    .pulse {
+      animation: pulse 2.2s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    .fade {
+      animation: fade 3s ease-in-out infinite;
+    }
+
+    @keyframes moveDash {
+      to { stroke-dashoffset: -44; }
+    }
+
+    @keyframes tokenMove {
+      0% { transform: translateX(0); opacity: 0; }
+      15% { opacity: 1; }
+      50% { transform: translateX(90px); opacity: 1; }
+      85% { opacity: 1; }
+      100% { transform: translateX(185px); opacity: 0; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.05); opacity: 1; }
+    }
+
+    @keyframes fade {
+      0%, 100% { opacity: 0.55; }
+      50% { opacity: 1; }
+    }
+  </style>
+
+  <rect width="920" height="520" fill="#0f172a"/>
+
+  <text x="460" y="52" text-anchor="middle" class="title">Babel Transpilation</text>
+  <text x="460" y="82" text-anchor="middle" class="subtitle">
+    Modern syntax goes in, browser-compatible JavaScript comes out.
+  </text>
+
+  <!-- Left Box -->
+  <rect x="70" y="120" width="310" height="240" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+  <text x="225" y="155" text-anchor="middle" class="boxTitle" fill="#38bdf8">Modern JS Code</text>
+
+  <text x="100" y="205" class="code">const greet = () =&gt; {</text>
+  <text x="120" y="238" class="code yellow">console.log("Hello");</text>
+  <text x="100" y="271" class="code">};</text>
+
+  <rect x="100" y="300" width="215" height="34" rx="10" fill="#0f172a" opacity="0.8"/>
+  <text x="118" y="322" font-family="Arial" font-size="14" font-weight="700" fill="#94a3b8">
+    Arrow function syntax
+  </text>
+
+  <!-- Center Babel -->
+  <circle cx="460" cy="240" r="52" fill="#facc15" class="pulse"/>
+  <text x="460" y="235" text-anchor="middle" font-family="Arial" font-size="21" font-weight="900" fill="#111827">
+    Babel
+  </text>
+  <text x="460" y="258" text-anchor="middle" font-family="Arial" font-size="13" font-weight="800" fill="#111827">
+    transforms
+  </text>
+
+  <!-- Arrow left to center -->
+  <line x1="390" y1="240" x2="408" y2="240" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="390" y1="240" x2="430" y2="240" stroke="#38bdf8" stroke-width="5" class="dash"/>
+  <polygon points="430,240 408,229 408,251" fill="#38bdf8"/>
+
+  <!-- Arrow center to right -->
+  <line x1="512" y1="240" x2="530" y2="240" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="490" y1="240" x2="530" y2="240" stroke="#22c55e" stroke-width="5" class="dash"/>
+  <polygon points="530,240 508,229 508,251" fill="#22c55e"/>
+
+  <!-- Moving token -->
+  <circle cx="390" cy="240" r="8" fill="#facc15" class="token"/>
+
+  <text x="460" y="330" text-anchor="middle" class="muted fade">
+    Parser → AST → Plugins → Generator
+  </text>
+
+  <!-- Right Box -->
+  <rect x="540" y="120" width="310" height="240" rx="18" fill="#1e293b" stroke="#22c55e" stroke-width="3"/>
+  <text x="695" y="155" text-anchor="middle" class="boxTitle" fill="#22c55e">Compatible JS Code</text>
+
+  <text x="570" y="205" class="code">var greet = function() {</text>
+  <text x="590" y="238" class="code yellow">console.log("Hello");</text>
+  <text x="570" y="271" class="code">};</text>
+
+  <rect x="570" y="300" width="225" height="34" rx="10" fill="#0f172a" opacity="0.8"/>
+  <text x="588" y="322" font-family="Arial" font-size="14" font-weight="700" fill="#94a3b8">
+    Browser-compatible syntax
+  </text>
+
+  <!-- Bottom Note -->
+  <rect x="165" y="405" width="590" height="52" rx="15" fill="#334155"/>
+  <text x="460" y="427" text-anchor="middle" font-family="Arial" font-size="16" font-weight="800" fill="#f8fafc">
+    Babel transforms syntax only.
+  </text>
+  <text x="460" y="449" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#cbd5e1">
+    Polyfills are needed for missing browser features like Promise or Array.includes.
+  </text>
+</svg>

@@ -1,0 +1,162 @@
+<svg width="1400" height="920" viewBox="0 0 1400 920" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Webpack advanced animated flow diagram</title>
+  <desc id="desc">A clear animated diagram explaining Webpack from source files to dependency graph, loaders, plugins, optimization, output chunks, and browser runtime.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="920" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="0.5" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef6ff"/>
+    </linearGradient>
+    <linearGradient id="webpackGrad" x1="560" y1="220" x2="880" y2="530" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dbeafe"/>
+      <stop offset="1" stop-color="#eff6ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="13" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrowBlue" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
+      <path d="M2 2 L12 7 L2 12 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowDark" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
+      <path d="M2 2 L12 7 L2 12 Z" fill="#0f172a"/>
+    </marker>
+
+    <style>
+      .title{font:800 40px Inter,Arial,sans-serif;fill:#0f172a;letter-spacing:-.6px}.subtitle{font:500 17px Inter,Arial,sans-serif;fill:#475569}.section{font:800 18px Inter,Arial,sans-serif;fill:#0f172a}.label{font:700 15px Inter,Arial,sans-serif;fill:#1e293b}.text{font:500 14px Inter,Arial,sans-serif;fill:#334155}.small{font:500 12px Inter,Arial,sans-serif;fill:#64748b}.tiny{font:700 11px Inter,Arial,sans-serif;fill:#64748b;letter-spacing:.7px}.card{fill:#fff;stroke:#dbe3ef;stroke-width:2;filter:url(#shadow)}.mini{fill:#f8fafc;stroke:#cbd5e1;stroke-width:1.5}.entry{fill:#ecfeff;stroke:#06b6d4;stroke-width:2.5}.graph{fill:#f5f3ff;stroke:#8b5cf6;stroke-width:2.5}.loader{fill:#f0fdf4;stroke:#22c55e;stroke-width:2}.plugin{fill:#fff7ed;stroke:#f97316;stroke-width:2}.opt{fill:#fdf2f8;stroke:#ec4899;stroke-width:2}.out{fill:#f8fafc;stroke:#0f172a;stroke-width:2.5}.browser{fill:#eef2ff;stroke:#6366f1;stroke-width:2.5}.arrow{stroke:#2563eb;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrowBlue);stroke-dasharray:14 10;animation:flow 3.4s linear infinite}.arrowDark{stroke:#0f172a;stroke-width:3;stroke-linecap:round;marker-end:url(#arrowDark)}.softArrow{stroke:#94a3b8;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:6 8;animation:flow 4s linear infinite}.pulse{animation:pulse 3.2s ease-in-out infinite;transform-origin:center;transform-box:fill-box}.float{animation:float 5s ease-in-out infinite}.node{animation:node 2.8s ease-in-out infinite;transform-origin:center;transform-box:fill-box}.code{font:700 13px ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;fill:#0f172a}@keyframes flow{to{stroke-dashoffset:-96}}@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.018);opacity:.94}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}@keyframes node{0%,100%{r:7;opacity:.75}50%{r:10;opacity:1}}
+    </style>
+  </defs>
+
+  <rect width="1400" height="920" fill="url(#bg)"/>
+  <circle cx="1230" cy="130" r="190" fill="#dbeafe" opacity="0.45"/>
+  <circle cx="105" cy="785" r="170" fill="#dcfce7" opacity="0.45"/>
+
+  <text x="70" y="65" class="title">Webpack — Complete Build Flow</text>
+  <text x="70" y="100" class="subtitle">Think of Webpack like a factory: it starts from one file, follows imports, converts files, improves the build, and creates browser-ready output.</text>
+
+  <!-- Step labels -->
+  <g>
+    <rect x="70" y="132" width="95" height="28" rx="14" fill="#dbeafe" stroke="#93c5fd"/>
+    <text x="92" y="151" class="tiny">STEP 01</text>
+    <rect x="360" y="132" width="95" height="28" rx="14" fill="#cffafe" stroke="#67e8f9"/>
+    <text x="382" y="151" class="tiny">STEP 02</text>
+    <rect x="620" y="132" width="95" height="28" rx="14" fill="#ede9fe" stroke="#c4b5fd"/>
+    <text x="642" y="151" class="tiny">STEP 03</text>
+    <rect x="1015" y="132" width="95" height="28" rx="14" fill="#e2e8f0" stroke="#cbd5e1"/>
+    <text x="1037" y="151" class="tiny">STEP 04</text>
+  </g>
+
+  <!-- Source files -->
+  <g class="float">
+    <rect x="70" y="175" width="250" height="400" rx="28" class="card"/>
+    <text x="105" y="220" class="section">Source Files</text>
+    <text x="105" y="250" class="small">Your project before build</text>
+
+    <rect x="105" y="280" width="180" height="42" rx="12" class="mini"/><text x="125" y="306" class="code">src/index.js</text>
+    <rect x="105" y="332" width="180" height="42" rx="12" class="mini"/><text x="125" y="358" class="code">App.jsx</text>
+    <rect x="105" y="384" width="180" height="42" rx="12" class="mini"/><text x="125" y="410" class="code">Button.tsx</text>
+    <rect x="105" y="436" width="180" height="42" rx="12" class="mini"/><text x="125" y="462" class="code">style.css</text>
+    <rect x="105" y="488" width="180" height="42" rx="12" class="mini"/><text x="125" y="514" class="code">logo.png</text>
+    <text x="105" y="552" class="small">All files are connected by</text>
+    <text x="105" y="570" class="small">import / export statements.</text>
+  </g>
+
+  <!-- Entry and config -->
+  <g>
+    <rect x="370" y="180" width="210" height="128" rx="24" class="entry pulse"/>
+    <text x="430" y="220" class="section">Entry</text>
+    <text x="405" y="252" class="text">Starting point</text>
+    <text x="405" y="278" class="code">./src/index.js</text>
+
+    <rect x="370" y="350" width="210" height="155" rx="24" class="card"/>
+    <text x="415" y="390" class="section">webpack.config.js</text>
+    <text x="405" y="423" class="text">Rules for build:</text>
+    <text x="405" y="449" class="small">entry, output, loaders,</text>
+    <text x="405" y="469" class="small">plugins, mode, devServer</text>
+  </g>
+
+  <!-- Dependency graph -->
+  <g>
+    <rect x="625" y="180" width="250" height="250" rx="28" class="graph pulse"/>
+    <text x="675" y="222" class="section">Dependency Graph</text>
+    <text x="660" y="252" class="small">Webpack follows every import</text>
+
+    <circle class="node" cx="750" cy="310" r="8" fill="#7c3aed"/>
+    <circle class="node" cx="690" cy="360" r="8" fill="#06b6d4" style="animation-delay:.2s"/>
+    <circle class="node" cx="815" cy="360" r="8" fill="#22c55e" style="animation-delay:.4s"/>
+    <circle class="node" cx="750" cy="395" r="8" fill="#f97316" style="animation-delay:.6s"/>
+    <path class="softArrow" d="M750 318 L695 352"/>
+    <path class="softArrow" d="M750 318 L810 352"/>
+    <path class="softArrow" d="M695 366 L745 390"/>
+    <path class="softArrow" d="M810 366 L755 390"/>
+    <text x="661" y="415" class="small">JS imports CSS, images, TS, etc.</text>
+  </g>
+
+  <!-- Webpack core -->
+  <g>
+    <rect x="610" y="475" width="290" height="210" rx="34" fill="url(#webpackGrad)" stroke="#3b82f6" stroke-width="3" filter="url(#shadow)" class="pulse"/>
+    <text x="680" y="525" class="section">Webpack Core</text>
+    <text x="650" y="560" class="text">1. reads dependency graph</text>
+    <text x="650" y="588" class="text">2. transforms files</text>
+    <text x="650" y="616" class="text">3. runs build plugins</text>
+    <text x="650" y="644" class="text">4. creates optimized assets</text>
+  </g>
+
+  <!-- Loaders plugins optimization -->
+  <g>
+    <rect x="955" y="190" width="250" height="95" rx="22" class="loader"/>
+    <text x="1035" y="226" class="section">Loaders</text>
+    <text x="990" y="256" class="text">Convert non-browser files</text>
+    <text x="990" y="276" class="small">TS/JSX/CSS/images → JS/assets</text>
+
+    <rect x="955" y="315" width="250" height="95" rx="22" class="plugin"/>
+    <text x="1035" y="351" class="section">Plugins</text>
+    <text x="990" y="381" class="text">Control build lifecycle</text>
+    <text x="990" y="401" class="small">HTML, env, cleanup, extract CSS</text>
+
+    <rect x="955" y="440" width="250" height="95" rx="22" class="opt"/>
+    <text x="1026" y="476" class="section">Optimization</text>
+    <text x="990" y="506" class="text">Smaller and faster output</text>
+    <text x="990" y="526" class="small">minify, tree-shake, split chunks</text>
+  </g>
+
+  <!-- Output chunks -->
+  <g class="float">
+    <rect x="1040" y="610" width="285" height="210" rx="28" class="out"/>
+    <text x="1130" y="652" class="section">Output</text>
+    <text x="1080" y="682" class="small">Final browser-ready files in dist/</text>
+    <rect x="1080" y="705" width="205" height="34" rx="10" fill="#ffffff" stroke="#cbd5e1"/><text x="1100" y="727" class="code">main.[hash].js</text>
+    <rect x="1080" y="748" width="205" height="34" rx="10" fill="#ffffff" stroke="#cbd5e1"/><text x="1100" y="770" class="code">vendors.[hash].js</text>
+    <rect x="1080" y="791" width="205" height="34" rx="10" fill="#ffffff" stroke="#cbd5e1"/><text x="1100" y="813" class="code">assets/*</text>
+  </g>
+
+  <!-- Browser -->
+  <g>
+    <rect x="650" y="745" width="230" height="95" rx="24" class="browser" filter="url(#shadow)"/>
+    <text x="720" y="782" class="section">Browser</text>
+    <text x="690" y="812" class="text">Loads final files</text>
+    <text x="690" y="832" class="small">HTML + JS + CSS + assets</text>
+  </g>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M320 350 C350 350 340 245 370 245"/>
+  <path class="arrow" d="M580 245 C610 245 605 260 625 280"/>
+  <path class="arrow" d="M580 430 C620 430 610 520 645 540"/>
+  <path class="arrow" d="M750 430 L750 475"/>
+  <path class="arrow" d="M875 565 C915 560 925 245 955 240"/>
+  <path class="arrow" d="M900 585 C930 585 925 365 955 365"/>
+  <path class="arrow" d="M900 610 C935 610 925 490 955 490"/>
+  <path class="arrow" d="M1205 488 C1265 520 1280 585 1200 610"/>
+  <path class="arrow" d="M1040 715 C980 735 930 770 880 792"/>
+
+  <!-- Mental model panel -->
+  <rect x="70" y="725" width="500" height="120" rx="26" fill="#ffffff" stroke="#dbe3ef" stroke-width="2" filter="url(#shadow)"/>
+  <text x="105" y="765" class="section">Simple Mental Model</text>
+  <text x="105" y="795" class="text">Entry = first file</text>
+  <text x="105" y="819" class="text">Loader = file converter</text>
+  <text x="320" y="795" class="text">Plugin = build helper</text>
+  <text x="320" y="819" class="text">Bundle = packed final file</text>
+
+  <!-- Footer note -->
+  <text x="70" y="885" class="small">Best use: complex apps needing custom build control. In modern Next.js, Webpack/Turbopack is usually managed by the framework.</text>
+</svg>
