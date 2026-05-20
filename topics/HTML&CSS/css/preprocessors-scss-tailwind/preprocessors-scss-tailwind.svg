@@ -1,0 +1,77 @@
+<svg width="1000" height="640" viewBox="0 0 1000 640" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="640" fill="#0f172a"/>
+
+  <text x="500" y="55" text-anchor="middle" fill="#ffffff" font-size="32" font-family="Arial" font-weight="700">
+    SCSS vs Tailwind CSS
+  </text>
+
+  <text x="500" y="88" text-anchor="middle" fill="#cbd5e1" font-size="18" font-family="Arial">
+    Two common ways to write scalable CSS in modern frontend projects
+  </text>
+
+  <!-- SCSS Panel -->
+  <rect x="70" y="130" width="390" height="390" rx="24" fill="#1e293b" stroke="#f472b6" stroke-width="4"/>
+
+  <text x="265" y="175" text-anchor="middle" fill="#f9a8d4" font-size="28" font-family="Arial" font-weight="700">
+    SCSS
+  </text>
+
+  <rect x="115" y="215" width="300" height="60" rx="14" fill="#831843"/>
+  <text x="265" y="252" text-anchor="middle" fill="#ffffff" font-size="18" font-family="Arial">
+    Variables
+  </text>
+
+  <rect x="115" y="295" width="300" height="60" rx="14" fill="#831843"/>
+  <text x="265" y="332" text-anchor="middle" fill="#ffffff" font-size="18" font-family="Arial">
+    Nesting
+  </text>
+
+  <rect x="115" y="375" width="300" height="60" rx="14" fill="#831843"/>
+  <text x="265" y="412" text-anchor="middle" fill="#ffffff" font-size="18" font-family="Arial">
+    Mixins + Functions
+  </text>
+
+  <text x="265" y="475" text-anchor="middle" fill="#e2e8f0" font-size="16" font-family="Arial">
+    Write enhanced CSS
+  </text>
+
+  <text x="265" y="500" text-anchor="middle" fill="#e2e8f0" font-size="16" font-family="Arial">
+    then compile to normal CSS
+  </text>
+
+  <!-- Tailwind Panel -->
+  <rect x="540" y="130" width="390" height="390" rx="24" fill="#1e293b" stroke="#38bdf8" stroke-width="4"/>
+
+  <text x="735" y="175" text-anchor="middle" fill="#7dd3fc" font-size="28" font-family="Arial" font-weight="700">
+    Tailwind CSS
+  </text>
+
+  <rect x="585" y="215" width="300" height="60" rx="14" fill="#075985"/>
+  <text x="735" y="252" text-anchor="middle" fill="#ffffff" font-size="18" font-family="Arial">
+    Utility Classes
+  </text>
+
+  <rect x="585" y="295" width="300" height="60" rx="14" fill="#075985"/>
+  <text x="735" y="332" text-anchor="middle" fill="#ffffff" font-size="18" font-family="Arial">
+    Mobile First
+  </text>
+
+  <rect x="585" y="375" width="300" height="60" rx="14" fill="#075985"/>
+  <text x="735" y="412" text-anchor="middle" fill="#ffffff" font-size="18" font-family="Arial">
+    Design Tokens
+  </text>
+
+  <text x="735" y="475" text-anchor="middle" fill="#e2e8f0" font-size="16" font-family="Arial">
+    Style directly in JSX/HTML
+  </text>
+
+  <text x="735" y="500" text-anchor="middle" fill="#e2e8f0" font-size="16" font-family="Arial">
+    using small reusable classes
+  </text>
+
+  <!-- Bottom Recommendation -->
+  <rect x="170" y="555" width="660" height="48" rx="16" fill="#111827" stroke="#22c55e" stroke-width="3"/>
+  <text x="500" y="586" text-anchor="middle" fill="#bbf7d0" font-size="18" font-family="Arial" font-weight="700">
+    Modern React/Next.js: Tailwind + reusable components, SCSS only when needed
+  </text>
+</svg>

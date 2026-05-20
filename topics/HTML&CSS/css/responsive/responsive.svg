@@ -1,0 +1,56 @@
+<svg width="1000" height="620" viewBox="0 0 1000 620" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="620" fill="#0f172a"/>
+
+  <text x="500" y="55" text-anchor="middle" fill="#ffffff" font-size="32" font-family="Arial" font-weight="700">
+    Responsive Design
+  </text>
+
+  <text x="500" y="88" text-anchor="middle" fill="#cbd5e1" font-size="18" font-family="Arial">
+    One layout adjusts for mobile, tablet, laptop, and desktop
+  </text>
+
+  <!-- Mobile -->
+  <rect x="80" y="150" width="150" height="290" rx="24" fill="#111827" stroke="#38bdf8" stroke-width="4"/>
+  <rect x="105" y="185" width="100" height="24" rx="6" fill="#38bdf8"/>
+  <rect x="105" y="230" width="100" height="54" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+  <rect x="105" y="300" width="100" height="54" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+  <rect x="105" y="370" width="100" height="34" rx="8" fill="#38bdf8"/>
+  <text x="155" y="480" text-anchor="middle" fill="#ffffff" font-size="20" font-family="Arial" font-weight="700">Mobile</text>
+  <text x="155" y="508" text-anchor="middle" fill="#cbd5e1" font-size="15" font-family="Arial">1 column</text>
+
+  <!-- Tablet -->
+  <rect x="300" y="165" width="210" height="260" rx="20" fill="#111827" stroke="#22c55e" stroke-width="4"/>
+  <rect x="330" y="200" width="150" height="26" rx="6" fill="#22c55e"/>
+  <rect x="330" y="250" width="65" height="70" rx="10" fill="#1e293b" stroke="#22c55e"/>
+  <rect x="415" y="250" width="65" height="70" rx="10" fill="#1e293b" stroke="#22c55e"/>
+  <rect x="330" y="340" width="65" height="50" rx="10" fill="#1e293b" stroke="#22c55e"/>
+  <rect x="415" y="340" width="65" height="50" rx="10" fill="#1e293b" stroke="#22c55e"/>
+  <text x="405" y="480" text-anchor="middle" fill="#ffffff" font-size="20" font-family="Arial" font-weight="700">Tablet</text>
+  <text x="405" y="508" text-anchor="middle" fill="#cbd5e1" font-size="15" font-family="Arial">2 columns</text>
+
+  <!-- Desktop -->
+  <rect x="590" y="135" width="330" height="300" rx="18" fill="#111827" stroke="#facc15" stroke-width="4"/>
+  <rect x="625" y="175" width="260" height="30" rx="8" fill="#facc15"/>
+  <rect x="625" y="235" width="75" height="85" rx="10" fill="#1e293b" stroke="#facc15"/>
+  <rect x="720" y="235" width="75" height="85" rx="10" fill="#1e293b" stroke="#facc15"/>
+  <rect x="815" y="235" width="75" height="85" rx="10" fill="#1e293b" stroke="#facc15"/>
+  <rect x="625" y="350" width="260" height="40" rx="10" fill="#facc15"/>
+  <text x="755" y="480" text-anchor="middle" fill="#ffffff" font-size="20" font-family="Arial" font-weight="700">Desktop</text>
+  <text x="755" y="508" text-anchor="middle" fill="#cbd5e1" font-size="15" font-family="Arial">3+ columns</text>
+
+  <!-- Breakpoint line -->
+  <line x1="155" y1="555" x2="755" y2="555" stroke="#94a3b8" stroke-width="4" marker-end="url(#arrow)"/>
+  <circle cx="155" cy="555" r="8" fill="#38bdf8"/>
+  <circle cx="405" cy="555" r="8" fill="#22c55e"/>
+  <circle cx="755" cy="555" r="8" fill="#facc15"/>
+
+  <text x="155" y="585" text-anchor="middle" fill="#38bdf8" font-size="15" font-family="Arial">default</text>
+  <text x="405" y="585" text-anchor="middle" fill="#22c55e" font-size="15" font-family="Arial">min-width: 768px</text>
+  <text x="755" y="585" text-anchor="middle" fill="#facc15" font-size="15" font-family="Arial">min-width: 1024px</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>
