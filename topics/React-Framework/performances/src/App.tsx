@@ -1,7 +1,8 @@
 // import { MemoCallbackDemo } from "./components/MemoCallbackDemo";
 // import { UseMemoDemo } from "./components/UseMemoDemo";
 // import { VirtualizedListDemo } from "./components/VirtualizedListDemo";
-import { VirtualUsersList } from "./components/VirtualUsersList";
+import { VirtualDomFlowSvg } from "./components/virtual-dom-flow";
+// import { VirtualUsersList } from "./components/VirtualUsersList";
 
 function App() {
   return (
@@ -24,7 +25,9 @@ function App() {
       {/* <UseMemoDemo /> */}
 
       {/* <VirtualizedListDemo /> */}
-      <VirtualUsersList />
+      {/* <VirtualUsersList /> */}
+
+      <VirtualDomFlowSvg />
     </main>
   );
 }
